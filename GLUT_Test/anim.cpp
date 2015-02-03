@@ -336,6 +336,7 @@ void drawStem(double segmentLength, double numberOfSeg, double amplitude, double
 
 
 void drawWing() {
+    set_colour(1, 1, 1);
     for (int i = 0; i<2; i++) {
         int isLeft = (i == 0)? 1: -1;
         mvstack.push(model_view);
@@ -344,7 +345,6 @@ void drawWing() {
         model_view *= RotateX(isLeft * 40 *sin(TIME * 10));
         model_view *= Translate(0, 0, isLeft * 1);
         model_view *= Scale(1, 0.1, 2);
-        set_colour(0.8, 0, 0);
         drawCube();
     
         model_view = mvstack.pop();
@@ -353,6 +353,7 @@ void drawWing() {
 
 }
 void drawBody() {
+    set_colour(1, 1, 0);
     mvstack.push(model_view);
     model_view *= Scale(2, 1, 1);
     drawCube();
@@ -360,6 +361,7 @@ void drawBody() {
     model_view =mvstack.pop();
 }
 void drawLegs() {
+    set_colour(0.8, 0.5, 0);
     double initialAngle = 65;
     double angle = 25;
     double wavespeed = 2;
@@ -371,8 +373,8 @@ void drawLegs() {
         mvstack.push(model_view);
         // move to position of first left leg
         model_view *= Translate(0, -0.5, isLeft * 0.5);
-        model_view *= RotateX(isLeft*angle*sin(TIME * wavespeed));
-        model_view *= RotateX(isLeft * initialAngle);
+        model_view *= RotateX(isLeft*(angle+10)*sin(TIME * wavespeed));
+        model_view *= RotateX(isLeft * (initialAngle+10));
         model_view *= Translate(-0.5, 0, isLeft * segmentLength/2);
         
         
@@ -403,6 +405,7 @@ void drawLegs() {
     
 }
 void drawHead() {
+    set_colour(0.8, 0.5, 0);
     mvstack.push(model_view);
     model_view *= Translate(-1, 0, 0);
     model_view *= Translate(-0.5,0, 0);
@@ -414,6 +417,7 @@ void drawHead() {
 }
 
 void drawBelly() {
+    set_colour(0.8, 0.7, 0);
     mvstack.push(model_view);
     
     model_view *= Translate(2, 0, 0);
