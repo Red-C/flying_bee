@@ -2,4 +2,8 @@ The coding environment of this project is on OSX Yosemite V10.10.1 with Xcode V6
 
 All the part of the requirements are fulfilled. This project uses drawbee function as highest level and "drawbody", "drawHead", "drawlegs", "drawWings", "drawBody" under "drawbee" function, and motion of each object is base on its parent object and routate around the point they touched. 
 
-Click flyingbee.xcodeproj to open the project and run after.
+----------------------
+Click flyingbee.xcodeproj to open.
+You might need to change working directory.
+    Product -> Scheme -> Edit Scheme
+    change working directory to D/flying_bee/GLUT_test   \\D is the directory

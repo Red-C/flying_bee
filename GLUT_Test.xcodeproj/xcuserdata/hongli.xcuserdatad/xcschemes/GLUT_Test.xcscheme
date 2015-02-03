@@ -44,7 +44,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/hongli/Documents/cs174a/SouseCode/GLUT_Test/GLUT_Test"
+      customWorkingDirectory = "/Users/hongli/Documents/cs174a/SouseCode/flying_bee/GLUT_Test"
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
